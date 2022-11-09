@@ -23,6 +23,7 @@ public class HotnessHomePage {
         for (WebElement item : topGames) {
             if (item.equals(gameWithIncreasingRank)) {
                 baseFunk.click(INCREASING_RANK);
+                break;
             }
         }
 
