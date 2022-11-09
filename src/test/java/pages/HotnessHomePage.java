@@ -7,7 +7,7 @@ import java.util.List;
 
 public class HotnessHomePage {
     private BaseFunk baseFunk;
-    private final By TOP_GAMES = By.xpath(".//li[@class= 'hotness-item']");
+    private final By TOP_GAMES = By.xpath(".//li[@class = 'hotness-item']");
     private final By INCREASING_RANK = By.xpath(".//fa-icon[@class = 'ng-fa-icon tw-text-base tw-text-green']");
 
 
