@@ -16,9 +16,8 @@ public class TopGameRequester {
         this.baseFunk = baseFunk;
     }
 
-    public Double averageRatingFromApi() {
-        GamePage gamePage = new GamePage(baseFunk);
-        String gameID = gamePage.getGameId();
+    public Double averageRatingFromApi(String gameID) {
+
         String url = PREFIX + gameID + POSTFIX;
 
         String average = RestAssured.given().accept(ContentType.XML).

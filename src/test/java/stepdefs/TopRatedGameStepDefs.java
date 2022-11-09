@@ -24,6 +24,7 @@ public class TopRatedGameStepDefs {
 
     @Given("Homepage is opened")
     public void open_url_url() {
+
         baseFunc.openUrl(HOME_PAGE_URL);
     }
 
@@ -35,12 +36,14 @@ public class TopRatedGameStepDefs {
 
     @When("we are opening top game with increasing rank")
     public void find_game_with_most_increased_rank() {
+
         hotnessHomePage.findTopGame();
     }
 
     @When("we are requesting information about the game from API")
     public void request_information_from_api() {
-        response = requester.averageRatingFromApi();
+        String gameId = gamePage.getGameId();
+        response = requester.averageRatingFromApi(gameId);
     }
 
     @When("we open game statistics page")
@@ -60,6 +63,7 @@ public class TopRatedGameStepDefs {
     }
     @Then("Close browser")
     public void close_browser(){
+
         baseFunc.closeBrowser();
     }
 
