@@ -1,7 +1,6 @@
 package requesters;
 
 import pages.BaseFunk;
-import pages.GamePage;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
@@ -13,6 +12,7 @@ public class TopGameRequester {
 
 
     public TopGameRequester(BaseFunk baseFunk) {
+
         this.baseFunk = baseFunk;
     }
 

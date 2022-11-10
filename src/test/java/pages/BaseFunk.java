@@ -35,6 +35,7 @@ public class BaseFunk {
     }
 
     public WebElement findElement(By locator) {
+
         return driver.findElement(locator);
     }
 
@@ -49,10 +50,12 @@ public class BaseFunk {
     }
 
     public double roundUpDouble(Double b) {
+
         return Math.round(b * 100) / 100.00;
     }
 
     public void closeBrowser() {
+
         driver.quit();
     }
 }

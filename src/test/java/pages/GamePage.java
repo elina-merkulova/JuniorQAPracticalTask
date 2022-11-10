@@ -10,10 +10,12 @@ public class GamePage {
     private final By GET_GAME_RATING = By.xpath(".//div[@class='outline-item-description']");
 
     public GamePage(BaseFunk baseFunk) {
+
         this.baseFunk = baseFunk;
     }
 
     public void openGameStats() {
+
         baseFunk.click(OPEN_GAME_STATS);
     }
 
