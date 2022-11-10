@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -28,7 +29,12 @@ public class HomePage {
         List<WebElement> topGames = baseFunk.findElements(TOP_GAMES);
         for (WebElement game : topGames) {
             if (game.findElement(INCREASING_RANK).isDisplayed()) {
-                game.click();
+                try {
+                    game.click();
+                } catch (ElementClickInterceptedException e) {
+                    System.out.println("Can't click from first  try");
+                    game.click();
+                }
             }
 
         }
