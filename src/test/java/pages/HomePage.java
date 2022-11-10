@@ -26,18 +26,11 @@ public class HomePage {
     }
 
     public void findTopGame() {
+
         List<WebElement> topGames = baseFunk.findElements(TOP_GAMES);
         for (WebElement game : topGames) {
-            if (game.findElement(INCREASING_RANK).isDisplayed()) {
-                try {
-                    game.click();
-                } catch (ElementClickInterceptedException e) {
-                    System.out.println("Can't click from first  try");
-                    game.click();
-                }
+            baseFunk.click(INCREASING_RANK);
+            break;
             }
-
         }
-
     }
-}
