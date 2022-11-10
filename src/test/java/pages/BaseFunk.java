@@ -51,7 +51,7 @@ public class BaseFunk {
 
     public double roundUpDouble(Double b) {
 
-        return Math.round(b * 100) / 100.00;
+        return Math.round(b * 10) / 10.00;
     }
 
     public void closeBrowser() {
