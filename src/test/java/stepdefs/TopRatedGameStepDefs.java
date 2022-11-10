@@ -3,7 +3,6 @@ package stepdefs;
 import pages.BaseFunk;
 import pages.GamePage;
 import pages.HomePage;
-import pages.HotnessHomePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,7 +14,6 @@ public class TopRatedGameStepDefs {
     GamePage gamePage = new GamePage(baseFunc);
     HomePage homePage = new HomePage(baseFunc);
     TopGameRequester requester = new TopGameRequester(baseFunc);
-    HotnessHomePage hotnessHomePage = new HotnessHomePage(baseFunc);
     private Double response;
     private Double averageWeb;
 
@@ -37,7 +35,7 @@ public class TopRatedGameStepDefs {
     @When("we are opening top game with increasing rank")
     public void find_game_with_most_increased_rank() {
 
-        hotnessHomePage.findTopGame();
+        homePage.findTopGame();
     }
 
     @When("we are requesting information about the game from API")
